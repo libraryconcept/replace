@@ -7,10 +7,11 @@
 :root{
 
     --main-bg-color: #F5F5F5;
-    --main-text-color:#0B3C5D;
+    --main-text-color:#3d424a;
     --datails-color: #F79824;
     --second-color: #2ecc71;
     --highlight-color: #ffffff;
+    --footer-color: #57bee6;
 
 
 }
@@ -26,12 +27,13 @@ body * {
 }
 
 body{
-    background-color: var(--main-bg-color);
+    background-color: var(--highlight-color);
 
     #container{
+        
         width: 360px;
         height: 712px;
-        border: 1px solid var(--main-text-color);
+        
         margin: auto;
     }
 
@@ -42,13 +44,20 @@ body{
 
     #profile img{
         width: 100px;
-        border: 0.8px solid var(--second-color);
-        border-radius: 30%;
+        border-radius: 10%;
     }
 
-    h1{
-        color: var(--main-text-color);
-    }
+   p{
+    margin: 30px 0 33px 0;
+    color: var(--main-text-color);
+   }
 
+    .giveBackBook{
+        padding: 20px;
+        border-radius: 5%;
+        background-color:var(--main-text-color) ;
+        color: white;
+        margin: 90px 0 90px 0;
+    }
 
 }
