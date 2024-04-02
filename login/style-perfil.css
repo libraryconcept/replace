@@ -79,8 +79,12 @@
     border: none;
   }
 
+  .card{
+    background: #ececec6e;
+  }
+
   .card img{
-    width: 50px;
+    width: 75px;
     height: 68px;
   }
 
