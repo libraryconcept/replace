@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   :root{
+   
+       --main-bg-color: #F5F5F5;
+       --main-text-color:#3d424a;
+       --datails-color: #F79824;
+       --second-color: #2ecc71;
+       --highlight-color: #ffffff;
+       --footer-color: #57bee6;
+   
+   
+   }
+
+   .nome-perfil{
+    font-weight: 700;
+   }
+
+   .perfil img{
+    width:115px;
+    padding: 20px;
+   }
+
+   .search{
+    padding:0 20%;
+    flex-wrap: wrap;
+  }
+
+  .search .col-7{
+    display: flex;
+    justify-content: end;
+  }
+
+  .search .col-7 img{
+    width:10%;
+    padding-right: 20px;
+  }
+
+  .search input{
+    border: 1px solid #151515;
+    padding: 10px 15px;
+    width:100%;
+    margin-top:15px;
+    border-radius:25px;
+  }
+
+  .input{
+    position: relative;
+  }
+
+  .input svg{
+    position:absolute;
+    right:20px;
+    bottom:9px;
+  }
+
+  .search br{
+    display: none;
+  }
+
+  .card-livros{
+    margin:auto;
+    width: 60%;
+  }
+
+  .card-livros .title{
+    margin: 40px 0;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .btn.btn-primary{
+    height: 36px;
+    background: #ffa500;
+    border: none;
+  }
+
+  .card img{
+    width: 50px;
+    height: 68px;
+  }
+
+  footer{
+    position: relative;
+  }
+
+  footer svg{
+    position: absolute;
+  }
+
+  @media screen and (max-width:1199px){
+      .search .col-7 img {
+        width: 15%;
+        padding-right: 20px;
+    }
+  }
+
+  @media screen and (max-width:991px){
+
+    .card-livros {
+        width: 90%;
+    }
+
+      .search .col-7 img {
+        width: 20%;
+        padding-right: 20px;
+    }
+  }
+
+  @media screen and (max-width:575px){
+
+    .search br{
+      display: block;
+    }
+
+    .search{
+      padding:0 20px;
+    }
+
+    .search .col-7 img {
+      width: 25%;
+      padding-right: 20px;
+  }
+
+  }
