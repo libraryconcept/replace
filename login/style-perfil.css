@@ -88,6 +88,13 @@
     height: 68px;
   }
 
+  /*modal*/
+
+  #mensagemSucesso{
+    text-align: center;
+    color:green;
+  }
+
   footer{
     position: relative;
   }

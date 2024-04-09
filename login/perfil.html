@@ -57,7 +57,11 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <a href="#" class="btn btn-primary">Go</a>
+
+            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              GO
+           </button>
+
           </div>
 
           <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
@@ -66,7 +70,11 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <a href="#" class="btn btn-primary">Go</a>
+
+            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              GO
+           </button>
+
           </div>
 
           <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
@@ -75,8 +83,37 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <a href="#" class="btn btn-primary">Go</a>
+
+           
+            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               GO
+            </button>
+
           </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label for="numero">Número RA:</label>
+                  <input type="number" id="numero" name="numero" min="0" max="100">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary botao-salvar">Save changes</button>
+                </div>
+
+                <div id="mensagemSucesso" style="display: none;">Feito com sucesso!</div>
+                
+              </div>
+            </div>
+          </div>
+                
 
     </section>
     
@@ -88,8 +125,46 @@
     
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+  
+  $(document).ready(function() {
+    $('.botao-salvar').click(function() {
+        $('.modal-header, .modal-body, .modal-footer').css("display","none");
+        $('#mensagemSucesso').fadeIn();
 
+                setTimeout(function() {
+                    $('#mensagemSucesso').fadeOut(function() {
+                        $('.modal-body, .modal-footer').css("display","");
+                        $('.modal-header').css("display","");
+                        $('.modal').modal('hide');
+                      
+                    });
+                }, 3000);
+            });
+        });
+
+        $(".go").on("click", function (e) {  
+              $(this).addClass('selected');   
+        });
+
+    $(document).ready(function(){
+        $('input').change(function(){
+            var valor = $(this).val();
+            if(valor !== ""){
+                $(".go.selected").css("background", "red");
+                $('.go.selected').text('Devolver');
+            }
+
+            $(this).val('');
+        });
+    });
+
+
+    </script>
+   
 </body>
 </html>
 
