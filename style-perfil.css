@@ -207,7 +207,7 @@ footer svg {
   .go.selected{
     background: red;
   }
-
+}
   @media screen and (max-width:1199px){
       .search .col-7 img {
         width: 15%;
