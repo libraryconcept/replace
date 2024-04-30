@@ -154,7 +154,8 @@
 
                 }else{
 
-                    $('.modal-header, .modal-body, .modal-footer').css("display", "none");
+                    if($('#numero').val() != ""){
+                        $('.modal-header, .modal-body, .modal-footer').css("display", "none");
                         $('#mensagemSucessoEntregue').fadeIn();
 
                         setTimeout(function() {
@@ -168,6 +169,10 @@
                     $(".go").removeClass('selected');
                     $(".go").text('Go');
                     limpar()
+
+                    }
+
+                    
                 }
 
             });
@@ -176,7 +181,7 @@
         function limpar(){
             $('#numero').val("")
         }
-        
+
     </script>
 </body>
 </html>
