@@ -109,6 +109,7 @@
                 </div>
 
                 <div id="mensagemSucesso" style="display: none;">Feito com sucesso!</div>
+                <div id="mensagemSucessoEntregue" style="display: none;">Livro entregue com sucesso!</div>
                 
               </div>
             </div>
@@ -129,42 +130,59 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <script>
-  
-  $(document).ready(function() {
-    $('.botao-salvar').click(function() {
-        $('.modal-header, .modal-body, .modal-footer').css("display","none");
-        $('#mensagemSucesso').fadeIn();
 
-                setTimeout(function() {
-                    $('#mensagemSucesso').fadeOut(function() {
-                        $('.modal-body, .modal-footer').css("display","");
-                        $('.modal-header').css("display","");
-                        $('.modal').modal('hide');
-                      
-                    });
-                }, 3000);
+        $(document).ready(function() {
+            $('.botao-salvar').click(function() {
+
+                if(!$('.go').hasClass('selected')){
+
+                    if ($('#numero').val() != "") {
+                        $('.modal-header, .modal-body, .modal-footer').css("display", "none");
+                        $('#mensagemSucesso').fadeIn();
+
+                        setTimeout(function() {
+                            $('#mensagemSucesso').fadeOut(function() {
+                                $('.modal-body, .modal-footer').css("display", "");
+                                $('.modal-header').css("display", "");
+                                $('.modal').modal('hide');
+                            });
+                        }, 3000);
+
+                        $(".go").addClass('selected');
+                        $(".go").text('Devolver');
+                        limpar()
+                }
+
+                }else{
+
+                    $('.modal-header, .modal-body, .modal-footer').css("display", "none");
+                        $('#mensagemSucessoEntregue').fadeIn();
+
+                        setTimeout(function() {
+                            $('#mensagemSucessoEntregue').fadeOut(function() {
+                                $('.modal-body, .modal-footer').css("display", "");
+                                $('.modal-header').css("display", "");
+                                $('.modal').modal('hide');
+                            });
+                        }, 3000);
+
+                    $(".go").removeClass('selected');
+                    $(".go").text('Go');
+                    limpar()
+                }
+
             });
         });
 
-        $(".go").on("click", function (e) {  
-              $(this).addClass('selected');   
-        });
 
-    $(document).ready(function(){
-        $('input').change(function(){
-            var valor = $(this).val();
-            if(valor !== ""){
-                $(".go.selected").css("background", "red");
-                $('.go.selected').text('Devolver');
-            }
 
-            $(this).val('');
-        });
-    });
+        function limpar(){
+            $('#numero').val("")
+        }
+
 
 
     </script>
    
 </body>
 </html>
-
