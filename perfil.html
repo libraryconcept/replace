@@ -173,47 +173,10 @@
             });
         });
 
-
-
         function limpar(){
             $('#numero').val("")
         }
-
-
-    $(".go").on("click", function (e) {
-      $(this).addClass('selected');
-    });
-
-    $(document).ready(function () {
-      $('input').change(function () {
-        var valor = $(this).val();
-        if (valor !== "") {
-          $(".go").css("background", "red");
-          $('.go').text('Devolver');
-        }
-
-        $(".card-livros").addClass("hidden");
-
-        $.ajax({
-          url: "https://librarymanagement.azurewebsites.net/api/Book",
-          type: "GET",
-          data: {
-            isbn: valor
-          },
-          crossDomain: true,
-          success: function (response) {
-            console.log("Dados recebidos da API:");
-            console.log(response);
-
-            $(".card-title").text(response.title);
-            $(".card-text").text(response.description);
-            $(".card-img-top").attr("src", response.imageLink);
-
-            $(".card-livros").removeClass("hidden");
-          },
-          error: function (xhr, status, error) {
-            console.error("Erro ao consultar a API:", error);
-          }
-        });
+        
+    </script>
 </body>
 </html>
