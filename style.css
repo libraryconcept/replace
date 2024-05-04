@@ -1,99 +1,100 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
 }
 
-:root{
+:root {
 
     --main-bg-color: #F5F5F5;
-    --main-text-color:#3d424a;
+    --main-text-color: #3d424a;
     --datails-color: #F79824;
     --second-color: #2ecc71;
     --highlight-color: #ffffff;
     --footer-color: #57bee6;
-
-
 }
 
 body * {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
-        font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-style: normal;      
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-body{
+body {
     background-color: var(--highlight-color);
     height: 100vh;
 }
 
 /*HEADER*/
 
-header{
+header {
     height: 110px;
 }
 
-header svg{
-    margin-top:-70px;
+header svg {
+    margin-top: -70px;
 }
 
 /*FIM HEADER*/
 
 /*CARROSSEL*/
 
-.swiper{
+.swiper {
     height: 308px;
 }
 
-.carrossel-titulo{
-    margin-bottom:15px;
+.carrossel-titulo {
+    margin-bottom: 15px;
 }
 
 body .swiper-pagination {
-  bottom:0px!important;
+    bottom: 0px !important;
 }
 
 /*FIM CARROSSEL*/
 
-#container{
-        margin: auto;
+#container {
+    margin: auto;
+    vertical-align: middle;
+    align-content: center;
 }
 
-#profile{
-        text-align: center;
-        width:50%;
-        margin:auto;
+
+#profile {
+    text-align: center;
+    width: 50%;
+    margin: auto;
 }
 
-    #profile img{
-        width: 204px;
-        height: 286px;
-        border-radius: 10%;
+#profile img {
+    width: 204px;
+    height: 286px;
+    border-radius: 10%;
 }
 
-p{
+p {
     margin: 15px 0 15px 0;
     color: var(--main-text-color);
 }
 
-.giveBackBook{
-        padding: 20px;
-        border-radius: 5%;
-        background-color:var(--main-text-color) ;
-        color: white;
+.giveBackBook {
+    padding: 20px;
+    border-radius: 5%;
+    background-color: var(--main-text-color);
+    color: white;
 }
 
-.giveBackBook:hover{
-    background:#151515;
+.giveBackBook:hover {
+    background: #151515;
     padding: 21px;
 }
 
@@ -101,33 +102,59 @@ footer {
     width: 100%;
     height: 170px;
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
-@media  screen and (max-width: 575px){
+@media screen and (min-height: 600px) and (min-width: 900px) {
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
 
+@media screen and (max-width: 575px) {
     header {
         height: 90px;
     }
 
-    header svg{
-        margin-top:0;
+    header svg {
+        margin-top: 0;
     }
 
-    #profile{
-        width:80%;
+    #profile {
+        width: 80%;
     }
 
     .carrossel-titulo {
         margin-bottom: 20px;
     }
-    
-    footer{
-        position:relative;
+
+    footer {
         height: 130px;
     }
 
-    footer svg{
-        position: absolute;
-        bottom:0;
+    footer svg {
+        position: inherit;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-height: 768px) {
+    footer {
+        height: 80px;
+    }
+}
+
+@media screen and (max-height: 670px) and (max-width: 575px) {
+    footer {
+        position: relative;
+        padding-top: 20px;
+        overflow: unset;
     }
 }

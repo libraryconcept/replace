@@ -17,171 +17,232 @@
     <div class="perfil d-flex flex-row justify-content-between">
       <div class="perfil d-flex align-items-center">
         <img src="assets/perfil.png">
-        <div>
+        <!-- <div>
           <p class="mb-0 nome-perfil">
             <trong>Fulado de tal</trong>
           </p>
           <p>123121613</p>
-        </div>
-    </header>
-    
-    <section class="search d-flex align-items-center justify-content-between">
-        <div class="col-5">
-            <h2>One page <br> per each day</h2>
-        </div>
-
-        <div class="col-7">
-            <img src="assets/notificacao.png">
-        </div>
-
-        <div class="w-100 input">
-            <input type="search" placeholder="Pesquisar...">
-            <svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11V11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#151515"/>
-            </svg>
-                
-        </div>
-
-    </section>
-
-    <section class="card-livros d-flex flex-column justify-content-center align-items-center">
-        <div class="title">
-            Top read
-        </div>
-        
-        <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
-            <img src="assets/img-livro-3.jpeg" class="card-img-top" alt="...">
-            <div class="card-body flex-row">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-
-            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              GO
-           </button>
-
-          </div>
-
-          <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
-            <img src="assets/img-livro-1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body flex-row">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-
-            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              GO
-           </button>
-
-          </div>
-
-          <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
-            <img src="./assets/img-livro-2.jpeg" class="card-img-top" alt="...">
-            <div class="card-body flex-row">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-
-           
-            <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
-               GO
-            </button>
-
-          </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <label for="numero">Número RA:</label>
-                  <input type="number" id="numero" name="numero" min="0" max="100">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary botao-salvar">Save changes</button>
-                </div>
-
-                <div id="mensagemSucesso" style="display: none;">Feito com sucesso!</div>
-                <div id="mensagemSucessoEntregue" style="display: none;">Livro entregue com sucesso!</div>
-                
-              </div>
-            </div>
-          </div>
-                
-
-    </section>
-    
-    <footer>
-
-        <svg width="169" height="202" viewBox="0 0 169 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M167.5 201C167.5 201 135.063 135.706 108.5 146C81.9365 156.294 48.8942 97.1301 51.2819 70.5C53.6695 43.8699 1 -11 1 3.5V201H167.5Z" fill="#FEAE49" stroke="#FEAE49"/>
-        </svg>
-      </div>
-    </div>
+        </div> -->
   </header>
 
+  <section class="search d-flex align-items-center justify-content-between">
+    <div class="col-5">
+      <h2>Devolução de livros</h2>
+    </div>
+
+    <!-- <div class="col-7">
+      <img src="assets/notificacao.png">
+    </div> -->
+
+    <div class="w-100 input">
+      <input id="buscaIsbn" type="search" placeholder="Insira aqui o código de barras...">
+      <svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11V11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
+          fill="#151515" />
+      </svg>
+
+    </div>
+
+  </section>
+
+  <section class="card-livros d-flex flex-column justify-content-center align-items-center hidden">
+    <div class="title">
+
+    </div>
+
+    <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
+      <img src="assets/img-livro-3.jpeg" class="card-img-top" alt="...">
+      <div class="card-body flex-row">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+
+      <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal" bookid="">
+      </button>
+
+    </div>
+
+    <!-- <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
+      <img src="assets/img-livro-1.jpeg" class="card-img-top" alt="...">
+      <div class="card-body flex-row">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+
+      <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        GO
+      </button>
+
+    </div>
+
+    <div class="card flex-row w-100 justify-content-center align-items-center p-4" style="width: 18rem;">
+      <img src="./assets/img-livro-2.jpeg" class="card-img-top" alt="...">
+      <div class="card-body flex-row">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+
+
+      <button type="button" class="btn btn-primary go" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        GO
+      </button>
+
+    </div> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirma Devolução?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="nome" class="form-label">Nome do Aluno:</label>
+            <input type="text" class="form-control" id="nome" name="nome" min="0" max="100">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary botao-salvar">Salvar</button>
+          </div>
+
+          <div id="mensagemSucesso" style="display: none;">Feito com sucesso!</div>
+          <div id="mensagemSucessoEntregue" style="display: none;">Livro entregue com sucesso!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+    <svg width="169" height="202" viewBox="0 0 169 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M167.5 201C167.5 201 135.063 135.706 108.5 146C81.9365 156.294 48.8942 97.1301 51.2819 70.5C53.6695 43.8699 1 -11 1 3.5V201H167.5Z"
+        fill="#FEAE49" stroke="#FEAE49" />
+    </svg>
+    </div>
+    </div>
+    </header>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
     <script>
+      $(document).ready(function () {
+        $('.botao-salvar').click(function () {
+          // if (!$('.go').hasClass('selected')) {
+          //   if ($('#nome').val() != "") {
+          //     $('.modal-header, .modal-body, .modal-footer').css("display", "none");
+          //     $('#mensagemSucesso').fadeIn();
 
-        $(document).ready(function() {
-            $('.botao-salvar').click(function() {
+          //     setTimeout(function () {
+          //       $('#mensagemSucesso').fadeOut(function () {
+          //         $('.modal-body, .modal-footer').css("display", "");
+          //         $('.modal-header').css("display", "");
+          //         $('.modal').modal('hide');
+          //       });
+          //     }, 3000);
 
-                if(!$('.go').hasClass('selected')){
+          //     $(".go").addClass('selected');
+          //     $(".go").text('Devolver');
+          //     limpar()
+          //   }
+          // } else {
+          if ($('#nome').val() != "") {
+            var id = $(".go").attr("bookId");
 
-                    if ($('#numero').val() != "") {
-                        $('.modal-header, .modal-body, .modal-footer').css("display", "none");
-                        $('#mensagemSucesso').fadeIn();
+            $.ajax({
+              url: "https://librarymanagement.azurewebsites.net/api/Book",
+              //url: "http://localhost:5001/api/Book/return",
+              type: "POST",
+              contentType: "application/json; charset=utf-8",
+              data: JSON.stringify({
+                bookId: id,
+                userName: $('#nome').val()
+              }),
+              crossDomain: true,
+              success: function (response) {
+                // console.log("Dados recebidos da API:");
+                // console.log(response);
 
-                        setTimeout(function() {
-                            $('#mensagemSucesso').fadeOut(function() {
-                                $('.modal-body, .modal-footer').css("display", "");
-                                $('.modal-header').css("display", "");
-                                $('.modal').modal('hide');
-                            });
-                        }, 3000);
+                $('.modal-header, .modal-body, .modal-footer').css("display", "none");
+                $('#mensagemSucessoEntregue').fadeIn();
 
-                        $(".go").addClass('selected');
-                        $(".go").text('Devolver');
-                        limpar()
-                }
+                setTimeout(function () {
+                  $('#mensagemSucessoEntregue').fadeOut(function () {
+                    $('.modal-body, .modal-footer').css("display", "");
+                    $('.modal-header').css("display", "");
+                    $('.modal').modal('hide');
+                  });
 
-                }else{
+                  location.replace("index.html")
+                }, 1500);
 
-                    if($('#numero').val() != ""){
-                        $('.modal-header, .modal-body, .modal-footer').css("display", "none");
-                        $('#mensagemSucessoEntregue').fadeIn();
-
-                        setTimeout(function() {
-                            $('#mensagemSucessoEntregue').fadeOut(function() {
-                                $('.modal-body, .modal-footer').css("display", "");
-                                $('.modal-header').css("display", "");
-                                $('.modal').modal('hide');
-                            });
-                        }, 3000);
-
-                    $(".go").removeClass('selected');
-                    $(".go").text('Go');
-                    limpar()
-
-                    }
-
-                    
-                }
-
+                $(".go").removeClass('selected');
+                limpar()
+              },
+              error: function (xhr, status, error) {
+                alert("Erro ao devolver o livro");
+                console.error("Erro ao devolver o livro:", error);
+              }
             });
+          }
+          else {
+            alert("Preencha o campo Nome do Aluno")
+          }
+          // }
         });
+      });
 
-        function limpar(){
-            $('#numero').val("")
-        }
+      function limpar() {
+        $('#nome').val("")
+      }
+
+      $(document).ready(function () {
+        $('#buscaIsbn').change(function () {
+          var valor = $(this).val();
+          $(".card-livros").addClass("hidden");
+
+          $.ajax({
+            url: "https://librarymanagement.azurewebsites.net/api/Book",
+            //url: "http://localhost:5001/api/Book",
+            type: "GET",
+            data: {
+              isbn: valor
+            },
+            crossDomain: true,
+            success: function (response) {
+              // console.log("Dados recebidos da API:");
+              // console.log(response);
+
+              $(".card-title").text(response.title);
+              $(".card-text").text(response.description);
+              $(".go").attr("bookid", response.id);
+
+              if (response.imageLink !== null)
+                $(".card-img-top").attr("src", response.imageLink);
+
+              $(".card-livros").removeClass("hidden");
+
+              $(".go").css("background", "red");
+              $('.go').text('Devolver');
+              $('.go').addClass('selected');
+            },
+            error: function (xhr, status, error) {
+              console.error("Erro ao consultar a API:", error);
+            }
+          });
+
+          $(this).val('');
+        });
+      });
 
     </script>
 </body>
+
 </html>
